@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+function fn1(a) {
+    console.log("In fn1");
+    return function() {
+        console.log(a*a);
+        function fn2() {
+            console.log("Inside fn2");
+        }
+        fn2();
+    }
+}
+let result = fn1(3);
+result();
+</script>
+
+</body>
+</html>
