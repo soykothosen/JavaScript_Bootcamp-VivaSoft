@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+//Part one
+
+var hoistingIntro = "Hi there, I am a string one.";
+
+function hoistingFunc() {
+	console.log(hoistingIntro);
+	var hoistingIntro = "Hi there, I am a string two";
+	console.log(hoistingIntro);
+}
+
+hoistingFunc();
+
+//Part 02
+ 
+console.log(x); // undefined
+var x = 5;
+
+ 
+// console.log(y); // Uncaught ReferenceError: x is not defined
+// const y = 5;
+ 
+// console.log(z); // Uncaught ReferenceError: x is not defined
+// let z = 5;
+
+// Part 03
+
+hoistedSuccess(); // Hoisted
+ 
+function hoistedSuccess() {
+    console.log("This is Function Statement and it is hoisted");
+}
+
+
+
+//Part 04
+hoistedFailed(); // Not Hoisted
+ 
+const hoistedFailed = () => {
+    console.log("This function expression so it is not hoisteed.");
+};
+
+
+
+
+</script>
+
+</body>
+</html>
