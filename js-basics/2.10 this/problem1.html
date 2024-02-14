@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+// function myFuction(){
+//     console.log(this)
+// }
+
+// myFuction();
+
+let Person = {
+
+    name: "Soykot Hosen",
+    sayName: function (){
+        console.log(this);
+    },
+    adress: "RajshahI"
+
+}
+
+Person.sayName();
+
+let Man = function(fname, lname){
+
+    this.fname= fname,
+    this.lname= lname,
+    this.sayInfo= function(){
+        return console.log("Hi my Name is "+ fname + ' '+ lname);
+    },
+    this.Other = function(){
+        console.log(this);
+    }
+
+
+}
+
+let man1 = new Man("Soykot","Hosen");
+
+man1.sayInfo();
+man1.Other();
+
+
+// const object = {
+//     message: "Hello, World!",
+//     getMessage() {
+//         const message = "Hello, Earth!";
+//         return this.message;
+//     },
+// };
+// console.log(object.getMessage());
+
+
+function Pet(name) {
+    this.name = name;
+    this.getName = () => this.name;
+}
+const cat = new Pet("Fluffy");
+console.log(cat.getName()); // What is logged?
+
+const cat1 = new Pet("Pluffy");
+const { getName } = cat;
+console.log(getName());
+
+var length = 4;
+function callback() {
+    console.log(this.length); // What is logged?
+}
+const object = {
+    length: 5,
+    method(callback) {
+        callback();
+        console.log(this.length);
+    },
+};
+object.method(callback);
+
+
+
+
+
+</script>
+
+</body>
+</html>
