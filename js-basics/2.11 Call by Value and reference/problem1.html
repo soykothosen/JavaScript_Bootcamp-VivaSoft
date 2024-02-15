@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+
+// let arr1 = ["JavaScript", "React", "Redux", "React-Redux"];
+// let arr2 = arr1;
+
+// console.log(arr1); // ["JavaScript", "React", "Redux", "React-Redux"]
+// console.log(arr2); // ["JavaScript", "React", "Redux", "React-Redux"]
+
+// arr2[3] = "Redux-Toolkit";
+// console.log(arr1); // ["JavaScript", "React", "Redux", "Redux-Toolkit"]
+// console.log(arr2); // ["JavaScript", "React", "Redux", "Redux-Toolkit"]
+
+var myObject = {
+    price: 20.99,
+    get_price: function () {
+        return this.price;
+    },
+};
+var customObject = Object.create(myObject);
+customObject.price = 19.99;
+console.log(customObject);
+console.log(customObject.get_price());
+delete customObject.price;
+console.log(customObject.get_price());
+
+(function (a) {
+    arguments[0] = 10;
+    console.log(a);
+})(5);
+
+function Car(color) {
+    this.color = color;
+}
+var lada = new Car("Black");
+Car.prototype.currentGear = 1;
+console.log(++lada.currentGear);
+console.log(Car.prototype.currentGear);
+
+var User = function () {};
+ 
+User.prototype.attributes = {
+    isAdmin: false,
+};
+ 
+var admin = new User("Sam"),
+guest = new User("Bob");
+ 
+admin.attributes.isAdmin = true;
+ 
+console.log(admin.attributes.isAdmin);
+console.log(guest.attributes.isAdmin);
+
+
+</script>
+
+</body>
+</html>
