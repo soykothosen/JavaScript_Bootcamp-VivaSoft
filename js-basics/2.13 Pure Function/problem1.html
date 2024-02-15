@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+
+    <script>
+
+// const impureAssoc = (key, value, object) => {
+// 	object[key] = value;
+// };
+// const person = {
+// 	name: "Bobo",
+// };
+// const result = impureAssoc("shoeSize", 400, person);
+// console.log({
+// 	person,
+// 	result,
+// });
+
+
+const pureAssoc = (key, value, object) => ({
+	...object,
+	[key]: value,
+});
+const person = {
+	name: "Bobo",
+};
+const result = pureAssoc("shoeSize", 400, person);
+console.log({
+	person,
+	result,
+});
+
+
+
+
+    </script>
+
+    
+    
+</body>
+</html>
